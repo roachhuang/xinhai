@@ -17,31 +17,31 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'home.html',
+        templateUrl: '../home.html',
         controller: 'PhoneListCtrl'
       }).
       when('/Photos', {
-        templateUrl: 'photos.html',
+        templateUrl: '../photos.html',
         controller: 'galleryCtrl'
       }).
 	 when('/Video', {
-        templateUrl: 'video.html',
+        templateUrl: '../video.html',
         controller: 'videoCtrl'
       }).  
 	 when('/Map', {
-        templateUrl: 'map.html',
+        templateUrl: '../map.html',
         controller: 'mapCtrl'
       }).  
 	 when('/Agreement', {
-        templateUrl: 'agreement.html',
+        templateUrl: '../agreement.html',
         controller: 'agreementCtrl'
       }).
 	 when('/Contact', {
-        templateUrl: 'contact.html',
+        templateUrl: '../contact.html',
         controller: 'contactCtrl'
       }).  
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '../home'
       });
   }]); 
   
@@ -57,7 +57,7 @@ app.config(['$routeProvider',
       description: 'Very Aqua-ish',
       images: [
          {
-          full: './images/large/livingroom.jpg'
+          full: '../images/large/livingroom.jpg'
          }
         ]
       },
@@ -66,7 +66,7 @@ app.config(['$routeProvider',
       description: "It's like orange, but better",   
       images: [
         {
-          full: './images/large/hallway.jpg'
+          full: '../images/large/hallway.jpg'
         }
       ]
     },
@@ -75,7 +75,7 @@ app.config(['$routeProvider',
 	  description: "It's like orange, but better",
 	  images: [
 		{
-		  full: './images/large/room1.jpg'
+		  full: '../images/large/room1.jpg'
 		}
 	  ]
 	},
@@ -84,7 +84,7 @@ app.config(['$routeProvider',
 		  description: "It's like orange, but better",		 
 		  images: [
 			{
-			  full: './images/large/room2.jpg'
+			  full: '../images/large/room2.jpg'
 			}
 		  ]
 	},
@@ -93,7 +93,7 @@ app.config(['$routeProvider',
 		  description: "It's like orange, but better",		
 		  images: [
 			{
-			  full: './images/large/dinningroom.jpg'
+			  full: '../images/large/dinningroom.jpg'
 			}
 		  ]
 	},
@@ -102,7 +102,7 @@ app.config(['$routeProvider',
 		  description: "It's like orange, but better",		 
 		  images: [
 			{
-			  full: './images/large/kitchen.jpg'
+			  full: '../images/large/kitchen.jpg'
 			}
 		  ]
 	}		
