@@ -1,0 +1,207 @@
+
+/* Table CSS */
+table {
+width:100%;
+border-collapse: collapse; 
+border: thin solid black;
+box-shadow:.5em .5em .2em black; 
+margin:0 20px 0 0; 
+}
+
+td, th  {
+border: thin dotted black;
+/* background-color:gray; 
+font-size:small;
+*/
+text-align:center;
+padding:5px;
+}
+th {background-color: #ccc;}
+
+tr:nth-child(odd) {
+  background-color: #99ff99;
+}
+
+caption {
+font-style: italic;
+padding-top: 8px;
+}
+
+/* form css */
+form {
+/* display:table; */
+/* color #4 */
+border: 1px double #046380;
+padding: 10px;
+margin:20px;
+/* background-color: #e6e2af;	//form color the same as body bg and table bg */
+background-color: #FFFFCC;	//form color the same as body bg and table bg
+/*
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+box-shadow:.2em .2em .5em #999;
+ */
+overflow:hidden;
+}
+form.searchbar {
+/* color #2 */
+border: 2px solid #a7a37e;
+margin:0;
+padding:0;
+}
+form ul {
+list-style:none;
+}
+ .searchbar fieldset{
+background:#002f2f;
+margin:0;
+padding:0;
+border:1px solid #ccc;
+}
+.searchbar input{
+/* color #3 */
+background:#efecca;
+}
+.searchbar input[type=submit], .searchbar input[type=text]{
+	height:24px;
+}
+	
+fieldset {
+margin:10px;
+padding:0;
+border: none;
+}
+
+/*
+legend {
+display: block; 
+width: 10em;
+float: left;
+margin-right: .5em;
+text-align: right;
+color: #04699d;
+}
+*/
+
+input {
+display: block;
+margin-bottom: 1.25em;
+width: 30em;
+border: thin dotted #ccc;
+/* border-width: 1px 2px 2px 1px; */
+}
+input#del{
+width:2em;
+margin:10px 0 10px 30px;
+}
+input[type="text"] ,[type="password"],[type='email']{
+/*
+background-image: -moz-linear-gradient(left top, left bottom, from(#0),
+to(#fff), color-stop(0.2, #fff));
+background-image: -webkit-gradient(linear,left top, left bottom,
+from(#0), to(#fff), color-stop(0.2, #fff));
+*/
+height: 1.8em;
+}
+
+br {
+display: none;
+}
+
+form input[type="submit"]{
+font-size:large;
+width: 5em;
+height:2em;
+border: 2px solid #ccc;
+background-color: white;
+/* color #4 */
+color: #046380;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+font-weight: bold;
+}
+
+label {
+width:auto;
+display:table-cell;
+/* color #4 */
+background-color: #046380;
+color: white;
+/* font-weight: bold; */
+padding: 4px;
+/* background-image: url(title-glass.png); 
+background-repeat: repeat-x;
+background-position: 50%;
+text-shadow: 0 −1px 0 #000;
+*/
+-moz-border-radius-topleft: 5px;
+-webkit-border-top-left-radius: 5px;
+-moz-border-radius-topright: 5px;
+-webkit-border-top-right-radius: 5px;
+text-transform: uppercase;
+/* font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: xx-small;
+*/
+}
+/*
+input[type=submit] {
+    background-color: #111111;
+    background: -webkit-gradient(linear, left top, left bottom, from(#111111), to(#ffffff));
+    background: -webkit-linear-gradient(top, #111111, #ffffff);
+    background: -moz-linear-gradient(top, #111111, #ffffff);
+    background: -ms-linear-gradient(top, #111111, #ffffff);
+    background: -o-linear-gradient(top, #111111, #ffffff);
+    background: linear-gradient(top, #111111, #ffffff);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+*/
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus
+{
+	/* input selected  */
+	background-color: #FFFF99;	
+	/* background-color:#E0FFFF; */
+}
+/*
+select {
+	font: 1em Verdana, sans-serif;
+	width:95px;
+}
+*/
+
+/******************************************************************
+*	this css is for validating username field of reg form 
+*   status: in progress, the username has been used & successful
+*
+******************************************************************/
+#username { 
+  background: #fff url('../images/status.gif') 202px 0 no-repeat; 
+  padding: 0 20px 0 2px; 
+  width: 198px; 
+}
+
+#username.thinking { background-position: 202px -19px; }
+#username.approved { background-position: 202px -35px; }
+#username.denied { 
+  background-color: #FF8282; 
+  background-position: 202px -52px; 
+}	

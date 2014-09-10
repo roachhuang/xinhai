@@ -1,0 +1,23 @@
+
+<video id="news" width=640 height=480 controls preload>
+
+<!-- H.264 format for IE and Safari -->
+<source src="./images/xinhai.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+<!-- Fall back on the Flash plugin -->
+<object width=640 height=480 type="application/x-shockwave-flash"
+data="flash_movie_player.swf">
+<!-- Param elements here configure the Flash movie player you're using -->
+<!-- Text is the ultimate fallback content -->
+<div>video element not supported and Flash plugin not installed.</div>
+</object>
+</video>
+
+<script>
+$(document).ready(function() {
+var a = new video();
+if (a.canPlayType("video/mp4")) {
+a.src = "./images/xinhai.mp4";
+a.play();
+}
+});
+</script>

@@ -1,0 +1,22 @@
+
+/* Footer */
+
+footer {
+	clear:both;
+	margin-top: 15px;
+	font-size: .8em;	
+	padding: 10px 10px 30px 10px;
+	/* color #5 */
+	background-color: #046380;
+	color: white;
+	text-align:center;
+}
+footer a {
+	color: white;	
+}
+/* add tutorial styles below here */
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+

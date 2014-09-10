@@ -1,0 +1,224 @@
+/* My Style Sheet */
+@import url(reset.css);
+@import url(nav.css);
+@import url(form_tbl.css);
+@import url(footer.css);
+
+html{
+/*
+	background-color:white;
+	background-position: center top;	
+	background-image: url(../img/sky.jpg);
+	*/
+	height:100%;
+	background-color:white;
+	background-repeat: no-repeat;	
+	-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+body{	
+	/* color #1 */
+	background-color: white;
+	height:100%;
+	width:960px;
+	/* w/o the "auto" it won't center */
+	margin:0 auto; 
+	
+	/*
+	background-attachment:fixed;
+	background-repeat: repeat-x;
+	
+	font-family:Cursive, ComicSans; 
+	 ont-family:georgia, garamond, "times new roman", times, serif;
+	*/
+	font-family: 'Lucida Casual', 'Comic Sans MS';
+	font-size:1.0em;
+	color:black;
+	line-height:25px;	 
+	}
+/*	
+header {
+background-repeat: repeat-x; 
+text-align:center;
+}
+*/
+header {
+	width:100%;
+	float:right;
+	background-color:green;
+	/*background-image: url(../img/3-leaf.jpg);
+	 padding-bottom: 30px; */
+}
+
+/*
+header h1 {
+	text-align:left;
+	font-size: 3em;	
+	color: white;
+	font-weight: bold;
+	padding-top: 30px;	
+	clear: both;
+	padding-left: 10px;
+color: #002f2f;
+-webkit-text-fill-color: #efecca;
+-webkit-text-stroke: 2px #002f2f;
+}
+*/
+
+#content{
+	float:left; 
+	clear-after:right;	
+	 width:100%;
+	/* margin-right:1em; */
+	margin:0;
+	padding-left:5px;
+	padding-right:5px;
+	/* background:LemonChiffon; */
+	
+	/* background-color:red; */
+}
+
+#content p{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+p {
+	font-family: "Palatino Linotype", Baskerville, serif;
+	color: navy;
+	/*
+	line-height: 150%;
+	margin-top: 10px;
+	margin-left: 80px;
+	*/
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	/* font-family:georgia, garamond, "times new roman", times, serif; */
+	/* color:#666666; */
+	font-weight: bold;
+	margin-top:5px;
+	padding-top:20px;
+	margin-left:1em;
+}
+h1{
+	font-family: "Arial Black", Arial, sans-serif;
+	font-size: xx-large;
+	color: red;
+	/* background:gold; */
+	margin-top:5px;
+	/* text-align:center; */
+}
+
+h2{
+  color: orange;
+  font-weight: normal;
+  font-family: "Palatino Linotype", Baskerville, serif;
+  font-size: x-large;
+  /*border-bottom: 2px white solid;
+   background: url(../img/bullet_flower.png) no-repeat;
+  padding: 10 0 10 10; */
+  margin: 1em; 
+}
+
+h3{
+	font-size:large;
+	color:blue;
+}
+h4{
+	font-size:medium;
+	color:Chocolate;
+}
+h5{
+	font-size:small;
+	color:green;
+}
+h6{
+	font-size:x-small;
+	color:orange;
+}
+hr{
+color:blue;
+}
+
+#viewcart_btn {
+background-image: url(../img/viewcart.png);
+border-width: 2px;
+border-style: solid;
+display:block;
+width:102px;
+height:83px;
+}
+
+/* Links 
+a:link, a:visited  {
+	color:blue;
+	font-size:1.2em;
+	text-decoration:underline;
+}
+
+a:active, a:hover{
+	color:darkred;
+	font:bold;
+	text-decoration:none;
+	/* font-size:140% */
+}
+*/
+/* Images 
+Blue boxes around linked graphics detract from the design of the page
+*/
+a img{
+	border:0;
+
+}	
+a.button {
+	border: solid 1px #000;
+	background:#b1b1b1;
+	color:#ffff;
+	font-weight:bold;
+	
+}
+	
+/* Common Classes */
+.floatLeft{
+	float:left;
+}
+.floatRight{
+	float:right;
+}
+.floatClear{
+	clear:both;
+}
+.textLeft{
+	text-align:left;
+}
+.textRight{
+	text-align:right;
+}
+.textCenter{
+	text-align:center;
+}
+.bold{
+	font-weight:bold;
+}
+.italic{
+	font-style:italic;
+}
+.required{
+	color:red;
+}	
+.warning{
+  display: block;
+  background-color: yellow;
+  color: black;
+  font-style:italic
+}
+.error{
+	display:block;
+	background-color:red;
+	color:white;
+	}
+#map-canvas {height: 100%}

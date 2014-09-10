@@ -1,0 +1,32 @@
+<?php
+session_start();
+// start output buffering;
+ob_start();
+// initialize a session
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			html {height:100%;}
+			body {height: 100%; margin: 0; padding: 0}
+			.container {height:100%;}
+			#map-canvas {height:100%;}
+		</style>		
+		<title><?php $content ?></title>
+	</head>
+
+<body id='<?php $content ?>'>
+<header>
+<hgroup>
+<h1 id="webname"><em>An apartment for rent</em></h1>
+<h3>A cozy, ventilated and conveniences place to stay</h3>
+</hgroup>
+
+</header>
+<?php require_once('menu.html');?>
+

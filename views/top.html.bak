@@ -1,0 +1,40 @@
+<?php
+session_start();
+// start output buffering;
+ob_start();
+// initialize a session
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>html, body, #map-canvas, #content{height: 100%;}</style>
+
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	
+<!-- css verison control
+<link rel="stylesheet" type="text/css" href="./css/mystyles.css?v=4"/>
+-->
+ 
+<title><?php $content ?></title>
+</head>
+
+<body id='<?php $content ?>'>
+<header>
+<hgroup>
+<h1 id="webname"><em>An apartment for rent</em></h1>
+<h3>A cozy, ventilated and conveniences place to stay</h3>
+</hgroup>
+<!--
+<img src="img/bg_body.png" alt="header" width="960">
+<div STYLE="position:absolute; top:0px; left:300px; width:960px; height:45px"></div>
+<CENTER><h1>Book Exchange</h1></CENTER>
+-->
+
+</header>
+<!--
+<?php require_once('menu.html');?>
+<h2 class='floatClear'><strong><?php htmlout($content); ?></strong></h2>
+-->

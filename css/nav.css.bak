@@ -1,0 +1,107 @@
+/* H nav */
+
+
+#navigation {		
+	list-style:none;
+	margin:0;
+	padding:0;	
+}
+
+#navigation li {	
+	float:left;
+	border: 0.5px dotted white;
+	min-width: 8em;
+	margin-right: 0;
+	text-align: center;
+}
+
+#navigation a:link, 
+#navigation a:visited {
+	background-color:#0000FF;
+	color: white;
+	display:block;
+	padding:0.2em;
+	text-decoration:none;
+	width:160px;
+	font-weight:bold;
+	text-align:center;	
+	text-transform:uppercase;
+	margin: 0;
+}
+
+#navigation a:hover, #navigation a:active {
+	background-color:black;
+}
+
+
+#home #menu_home a,
+#photos #menu_photos a,
+#map #menu_map a,
+#agreement #menu_agreement a,
+#about #menu_abt a,
+#contact #menu_contact a
+{
+   color:#0066CC;
+   background:white;
+   display:block;
+}
+
+/*
+nav li:last-of-type a {
+	border-right: none;	
+}
+
+.nav  ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.nav li {
+float: left;
+min-width: 7em;
+
+margin-right: 0.5em;
+text-align: center;
+}
+.nav li a:link,
+.nav li a:visited {
+background-color: rgb(255, 255, 255);
+color: rgb(85, 85, 102);
+display: block;
+padding: 0.2em;
+text-decoration: none;
+font-weight: bold;
+margin: 0 0 0.2em 0;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+-webkit-box-shadow: 3px 3px 3px 3px rgba(43, 43, 77, 0.5);
+-moz-box-shadow: 3px 3px 3px 3px rgba(43, 43, 77, 0.5);
+box-shadow: 3px 3px 3px 3px rgba(43, 43, 77, 0.5);
+}
+.nav li a:hover {
+background-color: rgba(255, 255, 255, 0.8);
+color: rgb(43, 43, 77);
+}
+*/
+#gallery {
+	float: left;
+	width: 160px;	
+	margin-right: 10px;
+	margin-left: 0px;
+	border-right: white 1px dotted;	
+}
+
+#gallery img {
+	display: inline-block;
+	margin: 0 5px 0px 0;
+	border: 1px solid black;
+}
+#photo {	
+	margin-left: 0px;	
+	position: relative;
+}
+#photo img {	
+	position: absolute;	
+}
+

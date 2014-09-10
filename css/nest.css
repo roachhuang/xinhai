@@ -1,0 +1,22 @@
+
+    #el01 optgroup {width:20em} /* Width */
+    #el02 optgroup { /* Text and background colour, blue on light gray */
+    color:#00f;
+    background-color:#ddd;
+    }
+    #el03 optgroup {background:url(/i/icon-info.gif) no-repeat 100% 50%} /* Background image */
+    #el04 optgroup {border-width:6px} /* Border width */
+    #el05 optgroup {border:2px dotted #00f} /* Border width, style and colour */
+    #el06 optgroup {border:none} /* No border */
+    #el07 optgroup {font-family:"Courier New",Courier} /* Different font */
+    #el08 optgroup {font-size:2em} /* Bigger text */
+    #el09 optgroup {font-size:0.5em} /* Smaller text */
+    #el10 optgroup { /* Normal, bold text */
+    font-style:normal;
+    font-weight:bold;
+    }
+    #el11 optgroup {padding:1em} /* Increase padding */
+    #el12 optgroup { /* Change font style and text alignment */
+    font-style:italic;
+    text-align:right;
+    }
