@@ -50,11 +50,9 @@ app.config(['$routeProvider',
 	rent: 20000,
 	lat: -34.397,
 	lng: 150.644,
-	size: 85		//sq meter
-	}
-	
-  var pix = [
-    {
+	size: 85	,	//sq meter
+	pix: [
+     {
       name: 'Living Room',   
       description: 'Very Aqua-ish',
       images: [
@@ -109,4 +107,5 @@ app.config(['$routeProvider',
 		  ]
 	}		
   ];
+  }
 })();
