@@ -1,15 +1,22 @@
 (function(){
-	var app = angular.module('store', []);
+	
+	var app = angular.module('myapp', []);
 
-	app.controller("ApartController", function($scope){
-		$scope.doom = wow;	
+	app.controller('ApartController', function(){
+		this.products= gems;
 	});
-	app.controller('StoreController', function(){
-		this.products = wow;
+
+	app.controller('PanelController', function(){
+		this.tab = 1;
+		this.selectTab = function(setTab){
+			this.tab = setTab;
+		};
+		this.isSelected = function(checkTab){
+			return this.tab === checkTab;
+		};
 	});
-	var wow = {firstname:'mark', lastname: 'huang'};
-	/*
-var gems = [
+
+	var gems = [
 	{
 		name: 'Dope Diamond',
 		price: 82.95,
@@ -24,111 +31,25 @@ var gems = [
 				thumb: 'img/diamond-thumb.png'
 			}
 		],
-		reviews: [
+	
+	},
+	{
+		name: 'Rare Ruby',
+		price: 95.95,
+		description: "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",
+		specification: "Lorizzle ipsizzle dolor sit dang, we gonna chung that's the shizzle shut the shizzle up. Nullam tellivizzle bling bling, aliquet volutpizzle, suscipit break it down, gravida.",
+		review: "Phasellizzle fo shizzle my nizzle crunk. Curabitur non velizzle the bizzle pede crackalackin facilisizzle. Bow wow wow rizzle nulla, iaculizzle fo shizzle, break.",
+		canPurchase: true,
+		soldOut: false,
+		images: [
 			{
-				stars: 5,
-				body: "I love this gem",
-				author: "joe@thomas.com"
-			},
-			{
-				stars: 3,
-				body: "I bought this for my wife",
-				author: "hubby@loveydovey.com"
+				full: 'img/ruby.png',
+				thumb: 'img/ruby-thumb.png'
 			}
-		]
-	}
+		],
+		
+	},
+	
 	];
 
-
-
-var apart =  [
-     {
-      name: 'Living Room',   
-      description: 'Very Aqua-ish',
-      images: [
-         {
-          full: '../images/large/livingroom.jpg'
-         }
-        ]
-      },
-	{
-      name: "hallway",     
-      description: "It's like orange, but better",   
-      images: [
-        {
-          full: '../images/large/hallway.jpg'
-        }
-      ]
-    },
-	{
-	  name: "Room1",     
-	  description: "It's like orange, but better",
-	  images: [
-		{
-		  full: '../images/large/room1.jpg'
-		}
-	  ]
-	},
-	{
-		  name: "Room2",     
-		  description: "It's like orange, but better",		 
-		  images: [
-			{
-			  full: '../images/large/room2.jpg'
-			}
-		  ]
-	},
-	{
-		  name: "Dinning Room",     
-		  description: "It's like orange, but better",		
-		  images: [
-			{
-			  full: '../images/large/dinningroom.jpg'
-			}
-		  ]
-	},
-	{
-		  name: "Kitchen",     
-		  description: "It's like orange, but better",		 
-		  images: [
-			{
-			  full: '../images/large/kitchen.jpg'
-			}
-		  ]
-	}	
-  ]; 
-
-app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: '../home.html',
-        controller: 'PhoneListCtrl'
-      }).
-      when('/Photos', {
-        templateUrl: '../photos.html',
-        controller: 'galleryCtrl'
-      }).
-	 when('/Video', {
-        templateUrl: '../video.html',
-        controller: 'videoCtrl'
-      }).  
-	 when('/Map', {
-        templateUrl: '../map.html',
-        controller: 'mapCtrl'
-      }).  
-	 when('/Agreement', {
-        templateUrl: '../agreement.html',
-        controller: 'agreementCtrl'
-      }).
-	 when('/Contact', {
-        templateUrl: '../contact.html',
-        controller: 'contactCtrl'
-      }).  
-      otherwise({
-        redirectTo: '../home'
-      });
-  }]); 
- */ 
- 
 })();
