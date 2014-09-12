@@ -8,9 +8,9 @@
 	<title>My HTML File</title>	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	
 </head>
-<body >
 <body ng-controller="ApartController as store">
-		<div class="container spacer">
+	<productMenu>></productMenu>	
+	<div class="container spacer">		
 	  	<ul class="list-group">
 	    	<li class="list-group-item col-md-12" ng-repeat="product in store.products">
 	    		<h3>{{ product.name }}</h3>
@@ -22,7 +22,7 @@
 	    		<br>
 	    		<br>
 	    		<section ng-controller="PanelController as panel">
-	    			<ul class="nav nav-pills col-md-12">
+	    			<ul class="nav nav-pills col-md-8">
 	    				<li ng-class="{ active:panel.isSelected(1) }" class="col-md-4"> <a href ng-click="panel.selectTab(1)">Description</a></li>
 	    				<li ng-class="{ active:panel.isSelected(2) }" class="col-md-4"> <a href ng-click="panel.selectTab(2)">Specifications</a></li>
 	    				<li ng-class="{ active:panel.isSelected(3) }" class="col-md-4"> <a href ng-click="panel.selectTab(3)">Reviews</a></li>

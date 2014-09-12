@@ -18,7 +18,12 @@
 			return this.tab === checkTab;
 		};
 	});
-
+	app.directive('productMenu', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'menu.html'
+		}
+	});
 	var gems = [
 	{
 		name: 'Living Room',		
