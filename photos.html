@@ -1,12 +1,63 @@
-		<h1>Gallery</h1>
-		<div id="gallery">
-		<a href="./images/large/livingroom.jpg"><img src="./images/small/livingroom.jpg" class="img-responsive; img-thumbnail" alt="golf balls"></a>
-		<a href="./images/large/hallway.jpg"><img src="./images/small//hallway.jpg" class="img-responsive; img-thumbnail" alt="rock wall" ></a>
-		<a href="./images/large/room1.jpg"><img src="./images/small/room1.jpg" class="img-responsive; img-thumbnail" alt="old course"></a>
-		<a href="./images/large/room2.jpg"><img src="./images/small/room2.jpg" class="img-responsive; img-thumbnail" alt="tees"></a>
-		<a href="./images/large/dinningroom.jpg"><img src="./images/small/dinningroom.jpg" class="img-responsive; img-thumbnail" alt="tree"></a>
-		<a href="./images/large/kitchen.jpg"><img src="./images/small/kitchen.jpg" class="img-responsive; img-thumbnail" alt="ocean course"></a>
-		</div>
-		<div id="photo"></div>
-
-
+<ul class="list-group">
+	<li class="list-group-item col-md-12" ng-repeat="product in store.products">
+		<h3>{{ product.name }}</h3>
+		<h5>{{ product.price | currency }}</h5>
+		<img ng-src="{{product.images[0].full}}"/>
+		<br>
+		<br>
+		<button ng-show="product.canPurchase">Add to Cart</button>
+		<br>
+		<br>
+		<section ng-controller="PanelController as panel">
+			<ul class="nav nav-pills col-md-8">
+				<li ng-class="{ active:panel.isSelected(1) }" class="col-md-4"> <a href ng-click="panel.selectTab(1)">Description</a></li>
+				<li ng-class="{ active:panel.isSelected(2) }" class="col-md-4"> <a href ng-click="panel.selectTab(2)">Specifications</a></li>
+				<li ng-class="{ active:panel.isSelected(3) }" class="col-md-4"> <a href ng-click="panel.selectTab(3)">Reviews</a></li>
+			</ul>
+				<div class="off-panel" ng-show="panel.isSelected(1)">
+					<h4>Description</h4>
+					<p>{{product.description}}</p>
+				</div>
+				<div class="off-panel" ng-show="panel.isSelected(2)">
+					<h4>Specifications</h4>
+					<p>{{product.specification}}</p>
+				</div>
+				<div class="off-panel" ng-show="panel.isSelected(3)">
+					<h4>Reviews</h4>
+					<blockquote ng-repeat="review in product.reviews">
+						<b>Stars: {{review.stars}}</b>
+						<p>{{review.body}}</p>
+						<cite>- {{review.author}}</cite>
+					</blockquote>
+					<div class="well">
+						<h4>Add Your Review</h4>
+						<form name="reviewForm">
+							<blockquote>
+								<b>Stars: {{review.stars}}</b>
+								<p>{{review.body}}</p>
+								<cite>- {{review.author}}</cite>
+							</blockquote>
+							<p>Select Rating</p>
+							<select ng-model="review.stars">
+								<option value="1">1 star</option>
+								<option value="2">2 stars</option>
+								<option value="3">3 stars</option>
+								<option value="4">4 stars</option>
+							</select>
+							<br>
+							<br>
+							<p>Enter Your Review</p>
+							<textarea ng-model="review.body" placeholder="enter your review"></textarea>
+							<br>
+							<br>
+							<p>Email Address</p>
+							<input ng-model="review.author" type="email" placeholder="you@email.com">
+							<br>
+							<br>
+							<input type="submit" value="Submit">
+						</form>
+					</div>
+				</div>
+		</section>
+	</li>
+</ul>
