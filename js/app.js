@@ -1,5 +1,4 @@
-(function(){
-	
+(function(){	
 	var app = angular.module('myapp', []);
 
 	app.controller('ApartController', function(){
@@ -18,11 +17,11 @@
 			return this.tab === checkTab;
 		};
 	});
-	app.directive('productMenu', function(){
+	app.directive('Menu', function(){
 		return {
 			restrict: 'E',
 			templateUrl: 'menu.html'
-		}
+		};
 	});
 	var gems = [
 	{
