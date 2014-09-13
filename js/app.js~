@@ -17,7 +17,7 @@
 			return this.tab === checkTab;
 		};
 	});
-	app.directive('xinhaiNav', function(){
+	app.directive('Menu', function(){
 		return {
 			restrict: 'E',
 			templateUrl: '/xinhai/menu.html'

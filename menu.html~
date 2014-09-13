@@ -1,5 +1,15 @@
 <div id='menu'>
 <ul id="navigation" class="nav nav-tabs" role="tablist">
+	<li><a href='#home'></a></li>
+	<li><a href='#photo'></a></li>
+	<li>Vidoe</li>
+	<li><a href='#map'>Map</a></li>
+	<li>Agreement></li>
+	<li>About</span></li>
+	<li>Help</li>	
+</ul>
+<!--
+<ul id="navigation" class="nav nav-tabs" role="tablist">
 	<li class="glyphicon glyphicon-home"><a href='#home'></a></li>
 	<li><a href='#photo'><span class="glyphicon glyphicon-picture"></span></a></li>
 	<li><span class="glyphicon glyphicon-film"></span></li>
@@ -8,4 +18,5 @@
 	<li>About<span class="glyphicon glyphicon-link"></span></li>
 	<li><span class="glyphicon glyphicon-user"></span></li>	
 </ul>
+-->
 </div>
