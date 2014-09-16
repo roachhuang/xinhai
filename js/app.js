@@ -42,7 +42,7 @@
 			//var map = {}; 
 			//var marker = {};
 			//var myLatLng = new google.maps.LatLng(-34.397, 150.644);
-			$scope.map = new google.maps.Map(document.getElementById('map-canvas'), $scope.mapOptions);
+			$scope.map = new google.maps.Map($("#map-canvas"), $scope.mapOptions);
 			console.log($scope.map);
 			// var myMarker='farm.png';
 			$scope.marker = new google.maps.Marker(
