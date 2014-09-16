@@ -5,6 +5,7 @@
 		var that = this;
 		$http.get('/xinhai/rooms.json').success(function(data){
 			that.products = data;
+			console.log('http ok');
 		});		
 	}]);
 	

@@ -1,56 +1,58 @@
 [
+
 	{
-		name: 'Living Room',		
-		description: "Lorizzle ipsizzle dolor sit dang, we gonna chung that's the shizzle shut the shizzle up. Nullam tellivizzle bling bling, aliquet volutpizzle, suscipit break it down, gravida.",	
-		images: [
+		"name": "Living Room",		
+		"description": "Lorizzle ipsizzle dolor sit dang, we gonna chung thats the shizzle shut the shizzle up. Nullam tellivizzle bling bling, aliquet volutpizzle, suscipit break it down, gravida.",
+		"images": [
 			{
-				full: 'xinhai/images/large/livingroom.jpg',
-				thumb: './images/small/livingroom.png'
+				"full": "xinhai/images/large/livingroom.jpg",
+				"thumb": "./images/small/livingroom.png"
 			}
-		],
+		]
 
 	},
 	{
-		name: 'Dinning Room',		
-		description: "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
-		images: [
+		"name": "Dinning Room",		
+		"description": "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
+		"images": [
 			{
-				full: './images/large/dinningroom.jpg',
-				thumb: './images/small/dinningroom.jpg'
+				"full": "./images/large/dinningroom.jpg",
+				"thumb": "./images/small/dinningroom.jpg"
 			}
-		],
+		]
 		
 	},
 	{
-		name: 'Room 1',		
-		description: "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
-		images: [
+		"name": "Room 1",		
+		"description": "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
+		"images": [
 			{
-				full: './images/large/room1.jpg',
-				thumb: './images/small/room1.jpg'
+				"full": "./images/large/room1.jpg",
+				"thumb": "./images/small/room1.jpg"
 			}
-		],
+		]
 		
 	},
 	{
-		name: 'Room 2',		
-		description: "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
-		images: [
+		"name": "Room 2",		
+		"description": "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
+		"images": [
 			{
-				full: './images/large/room2.jpg',
-				thumb: './images/small/room2.jpg'
+				"full": "./images/large/room2.jpg",
+				"thumb": "./images/small/room2.jpg"
 			}
-		],
+		]
 		
 	},
 	{
-		name: 'Kitchen',		
-		description: "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
-		images: [
+		"name": "Kitchen",		
+		"description": "Maecenas quis metus izzle fo shizzle my nizzle yo gangsta. Break yo neck, yall dope viverra fo. Curabitizzle sollicitudin boom shackalack quizzle purus.",		
+		"images": [
 			{
-				full: './images/large/kitchen.jpg',
-				thumb: './images/small/kitchen.jpg'
+				"full": "./images/large/kitchen.jpg",
+				"thumb": "./images/small/kitchen.jpg"
 			}
-		],		
+		]		
 	}
+
 ]
