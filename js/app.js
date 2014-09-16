@@ -1,10 +1,10 @@
 (function(){	
-	var app = angular.module('myapp', ['ngRoute']);
+	var app = angular.module('myapp', ['ngRoute', 'GoogleMaps']);
 
 	app.controller('ApartController', [ '$http', function($http){
 		var that = this;
 		$http.get('/xinhai/rooms.json').success(function(data){
-			that.products = data;
+			that.products = data;	// in here, this is the obj of $http, not apartController
 			console.log('http ok');
 		});		
 	}]);
@@ -29,27 +29,37 @@
 	});
 	// var marker = "";	// also global var
 	// Taipower MRT Ext 2
-	app.controller('mapController', function(){
-
-		this.init = function(){
-			var map = {}; 
-			var marker = {};
+	app.controller('mapController', function($scope, GoogleMaps){
+		$scope.map = GoogleMaps;
+		$scope.marker = {};
+		$scope.myLatLng = new google.maps.LatLng(25.029203,121.549028);
+		$scope.mapOptions = {
+				zoom: 18,
+				center: myLatLng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+		$scope.init = function(){
+			//var map = {}; 
+			//var marker = {};
 			//var myLatLng = new google.maps.LatLng(-34.397, 150.644);
-			var myLatLng = new google.maps.LatLng(25.029203,121.549028);
+			/* var myLatLng = new google.maps.LatLng(25.029203,121.549028);
 			var mapOptions = {
 				zoom: 18,
 				center: myLatLng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
-
-			map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			*/
+			$scope.map = new google.maps.Map(document.getElementById('map-canvas'), $scope.mapOptions);
+			console.log($scope.map);
 			// var myMarker='farm.png';
-			marker = new google.maps.Marker({
-				position: myLatLng,		
+			$scope.marker = new google.maps.Marker(
+				{
+				position: $scope.myLatLng,		
 				title: 'here',	
 				// icon: myMarker,
-				map: map
-			});
+				map: $scope.map
+				}
+			);
 				
 			//map.bindTo(marker);
 			//console.log(marker.getMap());
@@ -57,7 +67,7 @@
 			google.maps.event.addDomListener(window, "resize", function() {
 					//var center = map.getCenter();
 					//google.maps.event.trigger(map, "resize");
-					map.setCenter(myLatLng);
+					$scope.map.setCenter($scope.myLatLng);
 			});			
 		}; 
 	});	
