@@ -10,8 +10,7 @@
 	<style type="text/css">
 		html {height:100%;}
 		body {height: 100%; margin: 0; padding: 0}
-		.container {height:100%;}
-		
+		.container {height:100%;}		
 		#map-canvas {height:100%;}
 	</style>	
 </head>
@@ -21,9 +20,23 @@
 		<!-- route handles views -->
 		<div ng-view></div> 	  	
 	</div>
+	<footer>
+		<address>
+			<strong>eSafeNet Inc.</strong><br>
+			2F, 90, Section 1, Xinhai Road<br>
+			Taipei, 10663<br>
+			<abbr title="Phone">Tel:</abbr> (886) 922-729061<br>	
+		</address>
+		<address>
+			<strong> Mark Huang</strong><br>
+			<a href="mailto:#">nobody@nowhere.com</a>
+		</address>
+	</footer>	
 	<script src="http://code.jquery.com/jquery.js"></script>	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script async src="https://www.google-analytics.com/analytics.js"></script>
 	<script src='./js/app.js'></script>	
 </body>
 </html>
