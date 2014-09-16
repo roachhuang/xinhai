@@ -5,7 +5,7 @@
 		"description": "Lorizzle ipsizzle dolor sit dang, we gonna chung thats the shizzle shut the shizzle up. Nullam tellivizzle bling bling, aliquet volutpizzle, suscipit break it down, gravida.",
 		"images": [
 			{
-				"full": "xinhai/images/large/livingroom.jpg",
+				"full": "./images/large/livingroom.jpg",
 				"thumb": "./images/small/livingroom.png"
 			}
 		]
