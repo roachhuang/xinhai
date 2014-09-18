@@ -1,8 +1,14 @@
 
 <h3> Move your mouse over the red markers for more info.</h3><br>
  
-<div id="map-canvas" class="img-responsive" style="height:800px; width:600px;"></div>
-	{{init()}}
+<div id="map-canvas" class="img-responsive" style="height:800px; width:600px;">
+	{{mapCtrl.init()}}
+	<li ng-repeat='loc in mapCtrl.locations'>
+		{{mapCtrl.addMarker(loc)}}
+	</li>	
+</div>
+	
+
 <!--
 <script>
 	$(document).ready(function(){
