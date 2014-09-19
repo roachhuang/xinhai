@@ -29,10 +29,15 @@
 	});
 	// var marker = "";	// also global var
 	// Taipower MRT Ext 2
-	app.controller('mapController', function($scope){
+	app.controller('mapCtrl', [ '$http', '$scope', function($http, $scope){
+		var that = $scope;		
+		$http.get('/xinhai/map.json').success(function(data){
+			that.locations = data;	// in here, this is the obj of $http, not apartController
+			console.log('http map ok');
+		});		
 		//$scope.map = GoogleMaps;
 		//$scope.marker = {};			
-		$scope.myLatLng = new google.maps.LatLng(25.029203,121.549028);
+		$scope.myLatLng = new google.maps.LatLng(25.029203, 121.549028);
    		$scope.mapOptions = {
 			zoom: 18,
 			center: $scope.myLatLng,
@@ -45,6 +50,7 @@
 			$scope.map = new google.maps.Map(document.getElementById("map-canvas"), $scope.mapOptions);
 			console.log($scope.map);
 			// var myMarker='farm.png';
+			/*
 			$scope.marker = new google.maps.Marker(
 				{
 				position: $scope.myLatLng,		
@@ -52,8 +58,26 @@
 				// icon: myMarker,
 				map: $scope.map
 				}
+
 			);
-    	};    
+			*/
+    	};
+
+    	$scope.addMarker = function(loc){
+    		var marker = new google.maps.Marker({
+    			position: new google.maps.LatLng(loc.lat,loc.lng),
+    			title: loc.title,
+    			map: $scope.map
+    		});
+    		//marker.setMap(map);
+    		var infowindow = new google.maps.InfoWindow({ content: loc.msg });
+    		google.maps.event.addListener(marker, 'mouseover', function(){
+    			infowindow.open($scope.map, marker);
+    		});
+    		google.maps.event.addListener(marker, 'mouseout', function(){
+    			infowindow.close($scope.map, marker);
+    		});
+    	};	    
 				
 			//map.bindTo(marker);
 			//console.log(marker.getMap());
@@ -65,7 +89,7 @@
 					$scope.map.setCenter($scope.myLatLng);
 			});	
 			*/				
-	});	
+	}]);	
 
 	app.config(function($routeProvider){		
 		$routeProvider.
@@ -86,7 +110,7 @@
 			})			
 		.when("/map", 
 			{
-				controller: "mapController",
+				controller: "mapCtrl",
 				templateUrl: "./map.html"
 			})
 		.when("/agreement",
