@@ -30,15 +30,15 @@
 	// var marker = "";	// also global var
 	// Taipower MRT Ext 2
 	app.controller('mapCtrl', [ '$scope', '$http', function($scope, $http){
-		/*
-		var that = $scope;		
-		$http.get('/xinhai/map.json').success(function(data){
-			that.locations = data;	// in here, this is the obj of $http, not apartController
-			console.log('http map ok');
-		});		
+		
+		$scope.locations={};
 		//$scope.map = GoogleMaps;
 		//$scope.marker = {};	
-		*/		
+		var that = $scope;		
+		$http.get('/xinhai/map.json').success(function(data){
+				that.locations = data;	// in here, this is the obj of $http, not apartController
+				console.log(that.locations);
+		});				
 		$scope.myLatLng = new google.maps.LatLng(25.029203, 121.549028);
    		$scope.mapOptions = {
 			zoom: 18,
@@ -47,11 +47,13 @@
 		};
 
     	$scope.init = function(){
+    		// reading map.json
+    		
 			//var map = {}; 
 			//var marker = {};
 			//var myLatLng = new google.maps.LatLng(-34.397, 150.644);
 			$scope.map = new google.maps.Map(document.getElementById("map-canvas"), $scope.mapOptions);
-			console.log($scope.map);
+			//console.log($scope.map);
 			// var myMarker='farm.png';
 			/*
 			$scope.marker = new google.maps.Marker(

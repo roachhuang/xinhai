@@ -3,13 +3,10 @@
  
 <div id="map-canvas" class="img-responsive" style="height:800px; width:600px;">
 	{{init()}}
-	<!--
-	<li ng-repeat='loc in mapCtrl.locations'>
-		{{mapCtrl.addMarker(loc)}}
-	</li>
-	-->	
 </div>
-	
+<li ng-repeat='loc in locations'>
+	{{loc}}
+</li>	
 
 <!--
 <script>
