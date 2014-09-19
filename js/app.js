@@ -29,20 +29,23 @@
 	});
 	// var marker = "";	// also global var
 	// Taipower MRT Ext 2
-	app.controller('mapCtrl', [ '$http', '$scope', function($http, $scope){
+	app.controller('mapCtrl', [ '$scope', '$http', function($scope, $http){
+		/*
 		var that = $scope;		
 		$http.get('/xinhai/map.json').success(function(data){
 			that.locations = data;	// in here, this is the obj of $http, not apartController
 			console.log('http map ok');
 		});		
 		//$scope.map = GoogleMaps;
-		//$scope.marker = {};			
+		//$scope.marker = {};	
+		*/		
 		$scope.myLatLng = new google.maps.LatLng(25.029203, 121.549028);
    		$scope.mapOptions = {
 			zoom: 18,
 			center: $scope.myLatLng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
+
     	$scope.init = function(){
 			//var map = {}; 
 			//var marker = {};
