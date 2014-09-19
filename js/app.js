@@ -30,11 +30,12 @@
 	// var marker = "";	// also global var
 	// Taipower MRT Ext 2
 	app.controller('mapCtrl', [ '$scope', '$http', function($scope, $http){
-		
+		$scope.map={};
 		$scope.locations={};
 		//$scope.map = GoogleMaps;
 		//$scope.marker = {};	
-		var that = $scope;		
+		var that = $scope;
+		// don't move into init() coz it won't work		
 		$http.get('/xinhai/map.json').success(function(data){
 				that.locations = data;	// in here, this is the obj of $http, not apartController
 				console.log(that.locations);
@@ -45,7 +46,7 @@
 			center: $scope.myLatLng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
-
+		//$scope.map = new google.maps.Map(document.getElementById("map-canvas"), $scope.mapOptions);
     	$scope.init = function(){
     		// reading map.json
     		
@@ -69,6 +70,7 @@
     	};
 
     	$scope.addMarker = function(loc){
+    		console.log($scope.map);
     		var marker = new google.maps.Marker({
     			position: new google.maps.LatLng(loc.lat,loc.lng),
     			title: loc.title,
