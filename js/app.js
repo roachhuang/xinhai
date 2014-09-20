@@ -20,7 +20,7 @@
 	});
 	app.directive('xinhaiNav', function(){
 		return {
-			restrict: 'E',
+			restrict: 'A',
 			templateUrl: '/xinhai/menu.html'
 		};
 	});
