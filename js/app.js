@@ -1,5 +1,5 @@
 (function(){	
-	var app = angular.module('myapp', ['ngRoute']);
+	var app = angular.module('myapp', ['ngRoute', 'ngAnimate']);
 
 	app.controller('ApartController', [ '$http', function($http){
 		var that = this;
@@ -40,9 +40,10 @@
 				that.locations = data;	// in here, this is the obj of $http, not apartController
 				console.log(that.locations);
 		});				
-		$scope.myLatLng = new google.maps.LatLng(25.029203, 121.549028);
+		// $scope.myLatLng = new google.maps.LatLng(25.029203, 121.549028); my office
+		$scope.myLatLng = new google.maps.LatLng(25.021402, 121.531651);
    		$scope.mapOptions = {
-			zoom: 18,
+			zoom: 16,
 			center: $scope.myLatLng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
@@ -75,8 +76,7 @@
     			position: new google.maps.LatLng(loc.lat,loc.lng),
     			title: loc.title,
     			map: $scope.map
-    		});
-    		//marker.setMap(map);
+    		});    		
     		var infowindow = new google.maps.InfoWindow({ content: loc.msg });
     		google.maps.event.addListener(marker, 'mouseover', function(){
     			infowindow.open($scope.map, marker);
