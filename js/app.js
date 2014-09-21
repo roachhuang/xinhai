@@ -133,4 +133,18 @@
 			.otherwise({redirectTo: '/'});			
 	});
 
+	ngModule.animation('.expand', function() {
+		return {
+			enter : function(element, done) {
+				element.css({ 'left': -50, 'opacity': 0});
+				element.animate({
+					'left': 0, 'opacity': 1
+				}, done);
+			},
+			leave : function(element, done) {
+				element.animate({ 'left': -50, 'opacity':0 }, done);
+			}
+		}
+	});	
+
 })();

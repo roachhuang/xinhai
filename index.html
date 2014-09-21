@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" href ="./css/app.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<style type="text/css">
 		html {height:100%;}
@@ -16,14 +17,16 @@
 		<!--
 		<div class="col-xs-3 col-md-2"> <img class='img-circle' src="./images/coca_cola.png" alt="logo" height="42" width="84"></div>
 	-->	
+	
 	<img class='pull-left' class='img-circle' src="./images/saab.jpg" alt="logo" width='84' height="84">
-	<div xinhai-Nav class="center-block bg-success"></div>
+	<div xinhai-Nav class="bg-success"></div>
 	
 
 	<div class="container-fluid">		
 		<!-- route handles views -->
-		<div ng-view></div> 	  	
+		<div ng-view class="view-animate"></div> 	  	
 	</div>
+	<!--
 	<footer class = "bg-info">
 		<p class="text-center">
 			<strong>eSafeNet Inc.</strong><br>
@@ -31,7 +34,8 @@
 			<abbr title="Phone">Tel:</abbr> (886) 922-729061<br>	
 			<strong> Mark Huang </strong><a href="mailto:#">nobody@nowhere.com</a>
 		</p>
-	</footer>	
+	</footer>
+	-->	
 	<script src="http://code.jquery.com/jquery.js"></script>	
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
