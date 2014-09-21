@@ -1,5 +1,5 @@
-<ul class="list-group">
-	<li class="list-group-item col-md-12 expand" ng-repeat="product in store.products" >
+<ul class="list-group expand">
+	<li class="list-group-item col-md-12" ng-repeat="product in store.products" >
 		<h3>{{ product.name }}</h3>
 		<h5>{{ product.price | currency }}</h5>
 		<img ng-src="{{product.images[0].full}}"/>
