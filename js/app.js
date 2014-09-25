@@ -20,7 +20,7 @@
 	});
 	app.directive('xinhaiNav', function(){
 		return {
-			restrict: 'E',
+			restrict: 'A',
 			templateUrl: '/xinhai/menu.html'
 		};
 	});
@@ -29,26 +29,32 @@
 	});
 	// var marker = "";	// also global var
 	// Taipower MRT Ext 2
-	app.controller('mapCtrl', [ '$http', '$scope', function($http, $scope){
-		var that = $scope;		
-		$http.get('/xinhai/map.json').success(function(data){
-			that.locations = data;	// in here, this is the obj of $http, not apartController
-			console.log('http map ok');
-		});		
+	app.controller('mapCtrl', [ '$scope', '$http', function($scope, $http){
+		$scope.map={};
+		$scope.locations={};
 		//$scope.map = GoogleMaps;
-		//$scope.marker = {};			
+		//$scope.marker = {};	
+		var that = $scope;
+		// don't move into init() coz it won't work		
+		$http.get('/xinhai/map.json').success(function(data){
+				that.locations = data;	// in here, this is the obj of $http, not apartController
+				console.log(that.locations);
+		});				
 		$scope.myLatLng = new google.maps.LatLng(25.029203, 121.549028);
    		$scope.mapOptions = {
 			zoom: 18,
 			center: $scope.myLatLng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
+		//$scope.map = new google.maps.Map(document.getElementById("map-canvas"), $scope.mapOptions);
     	$scope.init = function(){
+    		// reading map.json
+    		
 			//var map = {}; 
 			//var marker = {};
 			//var myLatLng = new google.maps.LatLng(-34.397, 150.644);
 			$scope.map = new google.maps.Map(document.getElementById("map-canvas"), $scope.mapOptions);
-			console.log($scope.map);
+			//console.log($scope.map);
 			// var myMarker='farm.png';
 			/*
 			$scope.marker = new google.maps.Marker(
@@ -64,6 +70,7 @@
     	};
 
     	$scope.addMarker = function(loc){
+    		console.log($scope.map);
     		var marker = new google.maps.Marker({
     			position: new google.maps.LatLng(loc.lat,loc.lng),
     			title: loc.title,
